@@ -1,0 +1,85 @@
+body
+{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+	height: auto;
+}
+
+.title span{
+	font-weight: 100;
+	font-size: 0.5em;
+}
+img{max-height: 2em;
+border-radius:200px;}
+
+#col img{
+	max-height: 12em;
+}
+.section--content h7{
+  font-weight: bold;
+}
+.header{
+  margin: 20px;
+}
+.rectangle {
+  height: 50px;
+  width: 100px;
+  background-color: #555;
+}
+#foot{
+	background-color: black;
+	height: 10em;
+  padding-inline-start: 40px;
+}
+#foot li{
+	color: white;
+	list-style: none;
+
+}
+p{
+  font-size: 0.3em;
+}
+h6{
+  font-size: 0.5em;
+font-weight: normal;
+}
+
+h1 a {
+  line-height: 0.5;
+}
+#foot li a{
+	color: white;
+	font-size: 0.8em;
+	font-weight: 400;
+
+}
+#col{
+    display:block;
+		position:relative;
+		padding-inline-end: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-inline-start: 40px;
+
+}
+
+#col ul li{
+    display: inline-block;
+    width:30% ;
+}
+header{
+	background-color: white;
+	padding: 20%;
+	margin-bottom: 2em;
+}
+p span{
+  font-weight: bold;
+}
+.contact{
+	height: 98%;
+	margin: 50px;
+}
+span{
+  font-size: 0.5em;
+}
