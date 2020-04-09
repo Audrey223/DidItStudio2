@@ -1,6 +1,8 @@
 *, *::after, *::before {
 	box-sizing: border-box;
 }
+
+/*pages quisuisje et contact*/
 .contact{
 	text-align: center;
 	vertical-align: middle;
@@ -9,7 +11,48 @@
 background-color: white;
 }
 
+header{
+	background-color: white;
+	padding: 20%;
+	margin-bottom: 2em;
+}
 
+.headercontact{
+  margin: 20px;
+}
+
+.contact{
+	height: 98%;
+	margin: 50px;
+}
+
+#foot{
+	background-color: black;
+	height: 6em;
+  padding-inline-start: 40px;
+}
+#foot li a{
+	color: white;
+  font-size: 0.65em;
+	list-style: none;
+}
+
+
+
+#col{
+    display:block;
+		position:relative;
+		padding-inline-end: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-inline-start: 40px;
+
+}
+
+#col ul li{
+    display: inline-block;
+    width:30% ;
+}
 
 h5{
 	color:blue;
@@ -21,19 +64,7 @@ h7{
 	color: blue;
 	font-weight: bold;
 }
-h9{
-  font-size: 0.3em;
 
-	font-weight: bold;
-}
-h8{
-  font-size: 0.3em;
-	color: blue;
-}
-h10{
-  font-size: 0.5em;
-
-}
 h4{
 	color:blue;
 	font-weight: 400;
@@ -44,6 +75,39 @@ h3 a{
 	font-size: 0.8em;
 	font-weight: bold;
 }
+
+#col img{
+	max-height: 12em;
+  max-height: 15em;
+  border-radius:200px
+}
+#picto img{
+	max-height: 3em;
+}
+#pictotel img{
+	max-height: 2.7em;
+}
+
+h6{
+  font-size: 1em;
+font-weight: normal;
+}
+
+#contactmoi{
+    display:block;
+		position:relative;
+		padding-inline-end: 40px;
+
+}
+
+#contactmoi ul li{
+    display: inline-block;
+    width:8% ;
+}
+
+
+
+/*codrops*/
 .section__expander li a{
 	font-weight: bold;
 	color: white;
