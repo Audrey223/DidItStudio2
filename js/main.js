@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2018, Codrops
  * http://www.codrops.com
  */
@@ -27,11 +27,11 @@
 
 	// Window size.
 	let win = {width: window.innerWidth, height: window.innerHeight};
-	
+
 	// some animation settings.
 	const settings = {
-		image: {duration: 900, delay: 0, easing: [0.8,0,0.2,1]},
-		more: {duration: 900, delay: 0, easing: [0.8,0,0.2,1]},
+		image: {duration: 700, delay: 0, easing: [0.8,0,0.2,1]},
+		more: {duration: 700, delay: 0, easing: [0.8,0,0.2,1]},
 		facts: {duration: 300, delay: 0, easing: [0.8,0,0.2,1]},
 		title: {duration: 700, delay: 200, easing: [0.8,0,0.2,1]},
 		description: {duration: 900, delay: 400, easing: 'easeOutExpo'},
@@ -43,10 +43,10 @@
 		gallery: {duration: 800, easing: [0.2,1,0.3,1]},
 		navigationCtrls: {duration: 800, easing: [0.8,0,0.2,1]},
 		previewCloseCtrl: {duration: 300, easing: 'easeOutExpo'},
-		factsItems: {duration: 800, easing: [0.8,0,0.2,1]},
-		expander: {duration: 800, easing: [0.8,0,0.2,1]}
+		factsItems: {duration: 800, easing: [0.5,0,0.5,1]},
+		expander: {duration: 800, easing: [0.5,0,0.6,1]}
 	};
-	
+
 	class Entry {
         constructor(el) {
             this.DOM = {el: el};
@@ -81,8 +81,8 @@
 			return this.toggle(direction);
 		}
 		toggle(direction) {
-			this.direction = direction; 
-			return Promise.all([this.toggleTitle(!this.isHidden), 
+			this.direction = direction;
+			return Promise.all([this.toggleTitle(!this.isHidden),
 								this.toggleDescription(!this.isHidden),
 								this.toggleImage(!this.isHidden),
 								this.toggleMore(!this.isHidden),
@@ -143,7 +143,7 @@
 				opacity: {
 					value: this.isHidden ? 0 : 1,
 					duration: (target, index) => index ? settings.more.duration/3 : 1,
-					delay: (target, index) => index ? 
+					delay: (target, index) => index ?
 												this.isHidden ? 100 : settings.more.duration * 0.5 + settings.more.delay :
 												this.isHidden ? settings.more.duration + settings.more.delay : settings.more.delay
 				}
@@ -207,7 +207,7 @@
 			const factHeight = factEl.getBoundingClientRect().height + parseFloat(window.getComputedStyle(factEl).marginBottom);
 			const paddingFactsStyle = window.getComputedStyle(this.currentEntry.DOM.facts.wrapper);
 			const paddingFacts = parseFloat(paddingFactsStyle.paddingTop) + parseFloat(paddingFactsStyle.paddingBottom);
-			
+
 			this.factsTranslation = win.height - 2 * factHeight - paddingFacts;
 			for ( let i = 0; i <= this.entriesTotal - 1; ++i ) {
 				const entry = this.DOM.entries[i];
@@ -231,13 +231,13 @@
 			this.onNextClick = () => this.navigate('next');
 			this.DOM.navigation.prevCtrl.addEventListener('click', this.onPrevClick);
 			this.DOM.navigation.nextCtrl.addEventListener('click', this.onNextClick);
-			
+
 			// Main menu
 			this.DOM.menu.menuCtrls.toggle.addEventListener('click', () => this.toggleMenu());
-			
+
 			// Facts Container
 			this.DOM.factsCtrls.toggle.addEventListener('click', () => this.toggleFactsContainer());
-			
+
 			// Facts (clickable facts)
 			for ( let i = 0; i <= this.entriesTotal - 1; ++i ) {
 				const entry = this.DOM.entries[i];
@@ -245,10 +245,10 @@
 					 .filter(fact => fact.classList.contains('section__facts-item--clickable'))
 					 .forEach(clickableFact => clickableFact.addEventListener('click', () => this.preview(clickableFact.dataset.gallery)));
 			}
-			
+
 			// Close preview
 			this.DOM.previewCloseCtrl.addEventListener('click', () => this.closePreview());
-			
+
 			// Window resize
 			this.onResize = () => {
 				win = {width: window.innerWidth, height: window.innerHeight};
@@ -275,8 +275,8 @@
 			// Store direction
 			this.direction = direction;
 			// Update currentPos
-			const newPos = this.currentPos = this.direction === 'next' ? 
-				this.currentPos < this.entriesTotal - 1 ? this.currentPos + 1 : 0 : 
+			const newPos = this.currentPos = this.direction === 'next' ?
+				this.currentPos < this.entriesTotal - 1 ? this.currentPos + 1 : 0 :
 				this.currentPos = this.currentPos > 0 ? this.currentPos - 1 : this.entriesTotal - 1;
 
 			const newEntry = this.DOM.entries[newPos];
