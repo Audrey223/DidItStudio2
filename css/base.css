@@ -1,43 +1,64 @@
 *, *::after, *::before {
 	box-sizing: border-box;
 }
+/*page projet*/
+.projet {
+	font-weight: bold;
+	display: block;
+	margin: 0 0 1rem 0;
+	color:white;
+	height:90vh;
+}
+.titre{
+	margin-left: 12%;
+	margin-block-end: 0em;
+}
+.titre2 {
+	margin-left: 12%;
+text-transform: uppercase;
+margin-block-end: 2em;
+}
+
 
 /*pages quisuisje et contact*/
 .contact{
 	text-align: center;
 	vertical-align: middle;
-	margin-top: 10%;
-	margin-bottom: 15%;
-background-color: white;
 }
 
 header{
 	background-color: white;
-	padding: 20%;
-	margin-bottom: 2em;
+	height: 10vh;
+	margin: 2em;
 }
 
-.headercontact{
-  margin: 20px;
+main{
+	height: 80vh;
 }
 
-.contact{
-	height: 98%;
-	margin: 50px;
+h8 {
+  color: white;
+  font-size: 0.6em;
+  font-family: 'Orbitron', sans-serif;
 }
 
-#foot{
+
+footer{
+	height:10vh;
 	background-color: black;
-	height: 6em;
-  padding-inline-start: 40px;
+	position: static;
 }
-#foot li a{
+
+}
+footer ul li a{
 	color: white;
   font-size: 0.65em;
 	list-style: none;
 }
 
-
+#foot{
+	padding: 1em;
+}
 
 #col{
     display:block;
@@ -63,12 +84,15 @@ h7{
   font-size: 0.5em;
 	color: blue;
 	font-weight: bold;
+	font-family: 'Orbitron', sans-serif;
 }
 
 h4{
+margin-block-start: 0em;
 	color:blue;
 	font-weight: 400;
 	font-size: 2em;
+
 }
 h3 a{
 	color: white;
@@ -88,9 +112,19 @@ h3 a{
 	max-height: 2.7em;
 }
 
+#portf{
+	max-height: 2em;
+}
+#travail-graphique{
+	padding: 2em;
+}
+
 h6{
-  font-size: 1em;
-font-weight: normal;
+font-size: 1em;
+font-weight: lighter;
+margin-block-start: 1em;
+margin-block-end: 1em;
+line-height: 1.5em;
 }
 
 #contactmoi{
@@ -102,7 +136,7 @@ font-weight: normal;
 
 #contactmoi ul li{
     display: inline-block;
-    width:8% ;
+    padding:20px ;
 }
 
 
@@ -112,7 +146,9 @@ font-weight: normal;
 	font-weight: bold;
 	color: white;
 }
-h2{font-size: 1em;}
+h2{font-size: 1em;
+}
+
 body {
 	font-family: "Montserrat", sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -233,12 +269,12 @@ button:focus {
 
 .sections__header {
 	padding: 2rem 3rem 0 2rem;
-	display: flex;
+	display: absolute;
 }
 
 .title {
 	text-transform: lowercase;
-	font-size: 1.35rem;
+	font-size: 1.27rem;
 	margin: 0;
 }
 
@@ -350,11 +386,12 @@ button:focus {
 }
 
 .section__description {
-	line-height: 1.75;
-	overflow: hidden;
+	line-height: 1.5;
+	overflow: visible;
 	position: relative;
 	padding: 0 2rem 0 0;
 	font-weight: 300;
+
 }
 
 .section__description-inner {
@@ -686,6 +723,7 @@ color:white;
 		padding: 0 4rem;
 		grid-area: slide-content;
 	}
+
 	.section__expander {
 		grid-area: 1 / 2 / 4 / 4;
 		background: var(--color-bg-facts);
@@ -694,6 +732,8 @@ color:white;
 		position: relative;
 		z-index: 100;
 	}
+
+
 	.section__img {
 		height: auto;
 		grid-area: slide-image;
