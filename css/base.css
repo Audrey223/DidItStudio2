@@ -35,6 +35,10 @@ header{
 main{
 	height: 80vh;
 }
+body{
+	background-color: white;
+
+}
 
 h8 {
   color: white;
