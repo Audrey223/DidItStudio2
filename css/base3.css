@@ -1,3 +1,4 @@
+
 *, *::after, *::before {
 	box-sizing: border-box;
 }
@@ -6,7 +7,25 @@
 body{margin:0}
 html{line-height:1.1;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 
+.opacity{
+  animation: opacity 0.5s linear forwards;
+  animation-delay: 0.5;
+  animation-iteration-count: 1;
+opacity: 0;
+}
 
+@keyframes opacity {
+
+  0% {
+
+    opacity: 0;
+  }
+
+  100% {
+
+    opacity: 1;
+  }
+}
 header{
 	background-color: white;
 	height: 10vh;
@@ -351,34 +370,29 @@ button:focus {
 	margin: 0 0 2.5rem 0;
 }
 
-.section__facts-img {
+.section__facts-img:not(.icon icon--grid) {
 	max-width: 220px;
 	border-radius: 5px;
 	display: block;
-
+opacity: 0.4;
 	margin: 4rem 0 2rem 0;
 	position: relative;
 }
 
 .section__facts-img::before,
 .section__facts-img::after {
-	content: '';
+
 	width: 80%;
 	height: 80%;
 	background: #2f2f2f;
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: -1;
+
+
 }
 
-.section__facts-img::before {
-	transform: rotate(3deg);
-}
 
-.section__facts-img::after {
-	transform: rotate(-5deg);
-}
 
 .section__facts-img img {
 	max-width: none;
@@ -391,6 +405,7 @@ button:focus {
 	width: 1.5rem;
 	height: 1.5rem;
 	margin: -0.75rem 0 0 -0.75rem;
+	opacity: 1;
 }
 
 .section__facts-title {
